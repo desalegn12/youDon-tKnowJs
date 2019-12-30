@@ -208,7 +208,24 @@ console.log(baz.something);
 //in the ES5
 //now let's go
 
+function binding(p1,p2){
+    this.val=p1+p2;
+}
+var bar=binding.bind(null,"p1");
+var baz=new bar("p2");
+console.log(baz.val);
 
+
+function anatherBinding(p1,p2){
+    this.val=p1+p2
+}
+var bar1=anatherBinding.bind(null,"p1p2");
+var buz=new bar1("p3p4");
+
+console.log(buz.val);
 
  
+ 
+
+
  
